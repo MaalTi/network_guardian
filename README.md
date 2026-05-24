@@ -7,7 +7,7 @@
 - **nmap scan** (`nmap -sn`) on a configurable subnet (CIDR)
 - **Comparison** between scans to detect **added** and **removed** hosts
 - **Telemetry mode** (optional): scan history + debounce to reduce false positives (N consecutive scans to confirm a change)
-- **Desktop notifications**: `notify-send` (Linux) or `osascript` (macOS)
+- **Desktop notifications**: `fyi` (Linux) or `osascript` (macOS)
 - **Log files**: current scan, previous scan, alerts, main log; optional XML output for Zenmap
 - **Ignore list**: IP or CIDR ranges to exclude from alerts
 - **systemd service** (user) for background execution at session startup
@@ -19,7 +19,7 @@
 
 For notifications:
 
-- Linux: `notify-send` (often provided by `libnotify`)
+- Linux: `fyi` (https://codeberg.org/dnkl/fyi)
 - macOS: `osascript`
 
 ## Installation
@@ -128,7 +128,7 @@ systemctl --user enable network-guardian   # at session startup
 systemctl --user status network-guardian
 ```
 
-Unit file: `~/.config/systemd/user/network-guardian.service`. Interval can be set via `Environment=INTERVAL=...` in the unit or via the config file.
+Unit file: `~/.config/systemd/user/network-guardian.service`. Interval can be set via `Environment=INTERVAL=...` in the unit or via the config file. Note that the service binds to `graphical-session.target` to ensure notifications work.
 
 ## License
 
