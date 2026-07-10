@@ -5,14 +5,17 @@ All notable changes to this project are documented in this file.
 ## [1.1.0] — 2026-05-24
 
 ### Changed
+
 - Replaced `notify-send` with `fyi` for desktop notifications.
 - Re-bind systemd user service generator to `graphical-session.target` to ensure notifications work in the background.
 
 ### Fixed
+
 - Fixed CIDR parsing bug in `is_ignored` function by implementing pure-bash bitwise math, properly supporting sub-octet prefixes (e.g., `/22`).
 - Fixed unbound variable issues in array operations (`filter_ignored`, `pending_equals_current`).
 
 ### Optimized
+
 - Added `-T4 --max-retries 1` to nmap scans to speed up host discovery.
 
 ## [1.0.0] — 2025-03-02

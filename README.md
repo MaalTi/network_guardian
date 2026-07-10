@@ -19,7 +19,7 @@
 
 For notifications:
 
-- Linux: `fyi` (https://codeberg.org/dnkl/fyi)
+- Linux: `fyi` (<https://codeberg.org/dnkl/fyi>)
 - macOS: `osascript`
 
 ## Installation
